@@ -1,0 +1,34 @@
+---
+title: "DATA 607 - Discussion 12 [Recommender Systems]"
+author: "Simon U."
+date: "April 18, 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+I found O'Reilly **[video](https://www.safaribooksonline.com/case-studies/machine-learning/how-zocdoc-uses-machine-learni/9781491991336-video318567/)** about a Case Study on Machine Learning, which is about "How **[Zocdoc](https://www.zocdoc.com)** uses ML to direct healthcare services".  To paraphrase the presenter, Brian d'Alessandro, Zocdoc is like Yelp and OpenTable services combined.  Their search engine recommends doctors or healthcare providers to general public based on rankings, location and medical needs.  The site will then allow to book an appointment with selected doctor or provider.
+
+1.  Scenario Design analysis  
+    A.  Who are [Zocdoc's] target users?  
+        There are mainly two categories of users of Zocdoc website.  One is general population constituting the patients category.  The other category includes doctors and service providers which register with the service and pay a platform service fee.  
+    B.  What are their [users'] goals?  
+        For patients, the goal is to make it easy to find a *"suitable"* doctor based on medical needs and location.  The word *"suitable"* is key as the site has to target appropriate medical specialists based on the given medical needs.  For doctors, the goal is to expand their practice and exposure to the general public.  
+    C.  How can [Zocdoc] help them [users] accomplish those goals?  
+        The site is free for patients to use and makes it easy for them to search for a doctor and book an appointment.  Users can view a doctor's profile and reviews.  Doctors benefit by having more patients and having the site integrate appointments into doctor's scheduling system.  
+  
+2.  Additional information on site's recommendation capabilities  
+    The platform faces extra contraints, regulations and challenges associated with working in healthcare space.  General data science frameworks are either inoperable or illegal.  
+    Some main features of the data used for searching are availability, distance, ratings, specialty, etc.
+    They also use NLP to translate patient colloquial terms into medical specialties and conditions.
+    The ML system used is unique to searching.  Here are some technical slides from the presentation about the modeling:
+    ![](C:/Users/simus/Documents/R/R Markdown/wk12_img1.png)
+    ![](C:/Users/simus/Documents/R/R Markdown/wk12_img2.png)
+
+
+
+3.  Possible improvements to the site's recommendation capabilities
+
+    My suggestion would be to somehow incorporate User-based Collaborative Filtering as well.  Such model would attempt to mimic "word-of-mouth" recommendation and add to doctor's search result ranking by analyzing ratings data from many patients who have experienced similar medical symptoms in nearby locations.
